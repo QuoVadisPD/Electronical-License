@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>系统管理员主页</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>证照入库：</h1>
+  <div style="diplay: none;" id="msg"></div>
+  <form id="add-ec-to-library">
+    <div>
+      <label>证照名称：</label>
+      <div>
+        <input type="text" name="ec-name" id="ec-name" placeholder="全名（如：中华人民共和国居民身份证）" required></input>
+      </div>
+    </div>
+    <div>
+      <label>证照编号：</label>
+      <div>
+        <input type="text" name="ec-num" id="ec-num" placeholder="用于唯一标识证照的编号" required></input>
+      </div>
+    </div>
+    <div>
+      <label>有效期限：</label>
+      <div>
+        <input type="text" name="ec-expirationDate" id="ec-expirationDate" placeholder="如：2018-04-21" required></input>
+      </div>
+    </div>
+    <div>
+      <label>签发机关：</label>
+      <div>
+        <input type="text" name="ec-cardUnit" id="ec-cardUnit" placeholder="证照签发单位" required></input>
+      </div>
+    </div>
+    <div>
+      <label>证照持有者：</label>
+      <div>
+        <input type="text" name="ec-owner" id="ec-owner" placeholder="个人/法人/企业等" required></input>
+      </div>
+    </div>
+    <div>
+      <label>证照照面：</label>
+      <div>
+        <input type="file" name="ec-OFDLink" id="ec-OFDLink" required></input>
+      </div>
+    </div>
+    <div>
+      <label>以太坊地址：</label>
+      <div>
+        <input type="text" name="ec-ownerAddr" id="ec-ownerAddr" placeholder="证照持有者的以太坊账户地址" required></input>
+      </div>
+    </div>
+    <div>
+      <label>证照类别：</label>
+      <div>
+        <select name="ec-kind" id="ec-kind">
+          <option value="1">身份证</option>
+          <option value="2">居住证</option>
+          <option value="3">签证</option>
+          <option value="4">护照</option>
+          <option value="5">户口本</option>
+          <option value="6">军人证</option>
+          <option value="7">团员证</option>
+          <option value="8">党员证</option>
+          <option value="9">港澳通行证</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <label>证照级别</label>
+      <div>
+        <select name="ec-level" id="ec-level">
+          <option value="1">国家级</option>
+          <option value="2">省级</option>
+          <option value="3">市级</option>
+          <option value="4">县区级</option>
+          <option value="5">乡镇级</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div>
+      <button type="submit" style="background:yellow">添加证照</button>
+    </div>
+  </form>
+</body>
+</html>
